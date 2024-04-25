@@ -1,0 +1,139 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="US1_OpenSwagLabs" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1234,1064" sap2010:WorkflowViewState.IdRef="US1_OpenSwagLabs_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="60">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="45">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="US1_OpenSwagLabs" sap:VirtualizedContainerService.HintSize="1012,999" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="950,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Opening Swag Labs website&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome Swag Labs" sap:VirtualizedContainerService.HintSize="950,756" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="66e12a94-8e69-46fd-b136-443c9aca8209" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="916,539" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'Swag Labs'" sap:VirtualizedContainerService.HintSize="854,424" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="66e12a94-8e69-46fd-b136-443c9aca8209" Timeout="10" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,207" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Swag labs is opened&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,205" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Throw DisplayName="Throw - if website is not opened" Exception="[New Exception(&quot;Can not open Swag Labs&quot;)]" sap:VirtualizedContainerService.HintSize="338,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.saucedemo.com/" DesignTimeRectangle="8, 157, 1920, 108" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Swag Labs'" FullSelectorArgument="&lt;webctrl class='login_logo' parentid='root' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='login_logo' parentid='root' tag='DIV' type='' aaname='Swag Labs' check:innerText='Swag Labs' /&gt;" Guid="963052d4-cce6-4286-b91f-73819df4edf7" ImageBase64="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" InformativeScreenshot="ee35621480cf5a5b0138ec5c143df57b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Swag Labs' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="ELSDSb2Cok2nrA43chg9nQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFrSURBVDhPddPNK0RRGMfxGUozOxaShY2kJkVio5mp+QvkJXuWhLUNO1tmVlKsZDcLGRt/AiILeZsrEVJEsfGSl+/vOqee7oynPt1z73me55577r0xH9mgUI91fOIn4gujLrV6kDCMN1cQdYOUS62MTLBYQ8KqKYgqZsr5OpdeGSS04MwUfOAS5wgwg1a0GY2Zi0LcNxiBinyDXbSjCd3u/B53xh4G/fJX4ItlPuxMMO7Hf3uzrwQt7dRcfEFOxelgIc54ycxF7ajBGOwdTpBGCj3YwDF0E5unVzurBpvmorzjAU9Yg/ahATk8wudpH3rVQEu2DbxvTIQbQTCeNHNSypbzSU3oI7ET3i3CjycT5BOMS2ZOpnznIWzjwDhEEX3owgD0Gn2xxp1hAwUnSehf8PTMy3jFszvqkXyDLZafcOWVQUIzjkxB1LRLrR4kDEJvo1rxNTpcavUgYQ7axCtDhfoexvmxav8yY7Ff4RnjWld/dTIAAAAASUVORK5CYII=" InformativeScreenshot="1a7d13ac1853aef41f31e36f7b24855c.jpg" Reference="TME7CrFn6kurqxoQfG9f9Q/ylKsyPaftkCDyBdILzgNoA" Selector="&lt;html app='chrome.exe' title='Swag Labs' /&gt;" Url="https://www.saucedemo.com" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

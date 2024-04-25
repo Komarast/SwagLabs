@@ -1,0 +1,211 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="US8_ExtractCheckoutOverView" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Name" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1234,2146</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>US8_ExtractCheckoutOverView_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="68">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="49">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Extracts data from check overview and crates xlsx files in Data\Output&#xA;" DisplayName="US8_ExtractCheckoutOverView" sap:VirtualizedContainerService.HintSize="589,2081" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_CheckoutOverview" />
+      <Variable x:TypeArguments="sd:DataRow" Name="dr" />
+      <Variable x:TypeArguments="x:String" Name="str_PaymentInfo" />
+      <Variable x:TypeArguments="x:String" Name="str_ShippingInfo" />
+      <Variable x:TypeArguments="x:String" Name="str_Total" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="527,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Extracting Check Overview information&quot;]" />
+    <ui:BuildDataTable DataTable="[dt_CheckoutOverview]" DisplayName="Build Data Table - for overview" sap:VirtualizedContainerService.HintSize="527,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Payment_x0020_Information&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Shipping_x0020_Information&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Total&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Swag Labs" sap:VirtualizedContainerService.HintSize="527,1540" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="dda3fc23-c168-4073-bd45-88e3ff25350f" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="493,1323" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText DisplayName="Get Text 'Payment Information'" sap:VirtualizedContainerService.HintSize="431,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="dda3fc23-c168-4073-bd45-88e3ff25350f" TextString="[str_PaymentInfo]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.saucedemo.com/checkout-step-two.html" DesignTimeRectangle="42, 741, 1280, 25" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'SauceCard #31337'" FullSelectorArgument="&lt;webctrl class='summary_value_label' parentid='checkout_summary_container' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='summary_value_label' parentid='checkout_summary_container' tag='DIV' type='' /&gt;" Guid="517b052c-c007-4529-aa13-58ea074c700f" InformativeScreenshot="f89deb50c69ef4ce8608b5123ff9267d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Swag Labs' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="42, 697, 1280, 44" ElementType="Text" FriendlyName="'Payment Information'" FullSelectorArgument="&lt;webctrl class='summary_info_label' parentid='checkout_summary_container' tag='DIV' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl class='summary_info_label' parentid='checkout_summary_container' tag='DIV' type='' aaname='Payment Information:' check:innerText='Payment Information:' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Shipping Information'" sap:VirtualizedContainerService.HintSize="431,157" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="dda3fc23-c168-4073-bd45-88e3ff25350f" TextString="[str_ShippingInfo]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.saucedemo.com/checkout-step-two.html" DesignTimeRectangle="42, 810, 1280, 25" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Free Pony'" FullSelectorArgument="&lt;webctrl aaname='Free Pony Express Delivery!' class='summary_value_label' parentid='checkout_summary_container' tag='DIV' /&gt;" FuzzyAccuracy="0.79" FuzzySelectorArgument="&lt;webctrl class='summary_value_label' parentid='checkout_summary_container' tag='DIV' type='' /&gt;" Guid="b23ca20b-0ff9-457d-ac2f-3fabeb9d533f" ImageBase64="" InformativeScreenshot="5bb2efc3e22609526eff8fe65145fe7d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Swag Labs' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="42, 766, 1280, 44" ElementType="Text" FriendlyName="'Shipping Information'" FullSelectorArgument="&lt;webctrl aaname='Shipping Information:' class='summary_info_label' parentid='checkout_summary_container' tag='DIV' /&gt;" FuzzyAccuracy="0.79" FuzzySelectorArgument="&lt;webctrl aaname='Shipping Information:' class='summary_info_label' parentid='checkout_summary_container' tag='DIV' type='' check:innerText='Shipping Information:' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Total: $103.65'" sap:VirtualizedContainerService.HintSize="431,157" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="dda3fc23-c168-4073-bd45-88e3ff25350f" TextString="[str_Total]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.saucedemo.com/checkout-step-two.html" DesignTimeRectangle="42, 919, 1280, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Total: $103.65'" FullSelectorArgument="&lt;webctrl class='summary_total_label' parentid='checkout_summary_container' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='summary_total_label' parentid='checkout_summary_container' tag='DIV' type='' /&gt;" Guid="64840a16-6d67-4399-864f-f064187a5ef3" ImageBase64="" InformativeScreenshot="557e0cc755947f051be1a796317059f7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Swag Labs' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Finish'" sap:VirtualizedContainerService.HintSize="431,157" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dda3fc23-c168-4073-bd45-88e3ff25350f" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.saucedemo.com/checkout-step-two.html" DesignTimeRectangle="1102, 1007, 220, 34" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Finish'" FullSelectorArgument="&lt;webctrl id='finish' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='finish' tag='BUTTON' type='' class='btn btn_action btn_medium cart_button' aaname='Finish' check:innerText='Finish' /&gt;" Guid="d2cd0944-eeee-4279-8fee-2ab9f007fb72" ImageBase64="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" InformativeScreenshot="a56228050de8fc96735110a60d12f4af.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Swag Labs' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:MultipleAssign DisplayName="Multiple Assign - values to datarow" sap:VirtualizedContainerService.HintSize="431,194" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="sd:DataRow">[dr]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="sd:DataRow">[dt_CheckoutOverview.NewRow]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Object">[dr("Payment Information")]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[str_PaymentInfo]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Object">[dr("Shipping Information")]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[str_ShippingInfo]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:Object">[dr("Total")]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:Object">[str_Total.Substring(str_Total.IndexOf(":")+1).Trim]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[dr]" DataTable="[dt_CheckoutOverview]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="431,186" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="ELSDSb2Cok2nrA43chg9nQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFrSURBVDhPddPNK0RRGMfxGUozOxaShY2kJkVio5mp+QvkJXuWhLUNO1tmVlKsZDcLGRt/AiILeZsrEVJEsfGSl+/vOqee7oynPt1z73me55577r0xH9mgUI91fOIn4gujLrV6kDCMN1cQdYOUS62MTLBYQ8KqKYgqZsr5OpdeGSS04MwUfOAS5wgwg1a0GY2Zi0LcNxiBinyDXbSjCd3u/B53xh4G/fJX4ItlPuxMMO7Hf3uzrwQt7dRcfEFOxelgIc54ycxF7ajBGOwdTpBGCj3YwDF0E5unVzurBpvmorzjAU9Yg/ahATk8wudpH3rVQEu2DbxvTIQbQTCeNHNSypbzSU3oI7ET3i3CjycT5BOMS2ZOpnznIWzjwDhEEX3owgD0Gn2xxp1hAwUnSehf8PTMy3jFszvqkXyDLZafcOWVQUIzjkxB1LRLrR4kDEJvo1rxNTpcavUgYQ7axCtDhfoexvmxav8yY7Ff4RnjWld/dTIAAAAASUVORK5CYII=" InformativeScreenshot="1a7d13ac1853aef41f31e36f7b24855c.jpg" Reference="TME7CrFn6kurqxoQfG9f9Q/ylKsyPaftkCDyBdILzgNoA" Selector="&lt;html app='chrome.exe' title='Swag Labs' /&gt;" Url="https://www.saucedemo.com" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_CheckoutOverview]" DisplayName=" Create xlsx file " sap:VirtualizedContainerService.HintSize="527,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Overview" WorkbookPath="[&quot;Data\Output\&quot; + in_Name + &quot;_&quot; + Today.ToString(&quot;dd-MM-yyyy&quot;) + &quot;.xlsx&quot;]" />
+  </Sequence>
+</Activity>

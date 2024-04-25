@@ -1,0 +1,197 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="US3_AddItemsToCart" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_ArrayOfProducts" Type="InArgument(s:String[])" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1234,2047</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>US3_AddItemsToCart_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="76">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="US3_AddItemsToCart" sap:VirtualizedContainerService.HintSize="664,1982" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="602,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Adding Items to cart&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Swag Labs" sap:VirtualizedContainerService.HintSize="602,1739" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="18c7c806-3de4-46fc-996f-95b8ead582b1" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="568,1522" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Check if products page is opened" sap:VirtualizedContainerService.HintSize="506,801" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NCheckState DisplayName="Check App State 'Products'" EnableIfExists="False" sap:VirtualizedContainerService.HintSize="444,686" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="18c7c806-3de4-46fc-996f-95b8ead582b1" Timeout="5" Version="V3">
+                <uix:NCheckState.IfExists>
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,105" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
+                </uix:NCheckState.IfExists>
+                <uix:NCheckState.IfNotExists>
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,469" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Open Menu'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="18c7c806-3de4-46fc-996f-95b8ead582b1" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.saucedemo.com/inventory.html" DesignTimeRectangle="28, 230, 20, 20" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Open Menu'" FullSelectorArgument="&lt;webctrl id='react-burger-menu-btn' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='react-burger-menu-btn' tag='BUTTON' type='' class='' aaname='Open Menu' check:innerText='Open Menu' /&gt;" Guid="29009829-9d46-4676-97fc-9e01f31955ae" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVEhLY/hPYzBqAUGAYsGshQv/d06cQBGet2QJ1DQIgFvw+OnT/8LKSlTBL1+9gpqKZMG/f//+z5g/H6urSMFzFi+CmggBwyySaQHgFvz9+/d/fFbmf9/ISIpwQnYWOD5hAG7BvQcPsKYIcvCjJ0+gpiJZMJqKcAH6WUDzVPTsxQusKYJULKKi/P/V69dQU9GC6PK1q/+PnDhBEb564wbUNAgYRpFMKzDULfj/HwCPQc4G3WUZJAAAAABJRU5ErkJggg==" InformativeScreenshot="d001cb741739f5c549f793cdafdebedf.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Swag Labs' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'All Items'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="18c7c806-3de4-46fc-996f-95b8ead582b1" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.saucedemo.com/inventory.html" DesignTimeRectangle="32, 250, 252, 41" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'All Items'" FullSelectorArgument="&lt;webctrl id='inventory_sidebar_link' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='inventory_sidebar_link' tag='A' type='' class='bm-item menu-item' aaname='All Items' check:innerText='All Items' /&gt;" Guid="1360ae60-05d8-4fed-b2c7-5d8674b3b267" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQAAAAAtCAYAAABBN7U6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAROSURBVHhe7drBSxtZHAfw/TPyV+S4h5xyEE/tyR6CIgQhUgRB0kPJQtmctJeAVCRY0EohPSwKSyWQLSktiik0kQVnD5tAyc6CLQlKiSImJfDd38y8MTPJxFV3KZH3/cA7zMwjMwn5fee9N/MDiEhbDAAijTEAiDTGACDSGAOASGMMACKNMQCINMYAINIYA4BIYwwAIo0xAIg0xgAg0hgDgEhjDAAijTEAiDTGACDSWHAAfP0NyVgEoWcltNWuHgPL1jG7jSP59ljt79PcwYzbbzqO7B8ddeA2vOf0t5nCkPMT0b8KDIDWbhqhxATGYhnsXaidHu3TM7ROj5HPSBE+fY+W2u/T7Ugfq5+BjYUIxnJVdeB2nHNK289I4WdQdLe/qQ4e9vWvG2qLiIYJCIAzFJ9ad9YScgtRLH0cfucur0sAPNlBQ20HO8b2E+n3fxXk4YoEwArKanNQB3vPogwAomsYDICLEtKxOHJ/y8A7N4HwaiVgGuAYtQCwrydgmjBwjd0zGL+mMZWQoJDjPz5MIXvgnUpYU440tnc3MRWPIJxII/9JRjI/30c4FsWDF4bnN+mgVshcflY4MYt0oT70NyMaJQMB0P4gQ+yFLZjWxp+bGJuWYuvahwaM3AjgwpkWFFflfKslNQWRdu4dxXTkuicRnl9E7qCORrOO8rs1TE1HMffGDQErAKK4l9mBcVTFhlx/eHoWywefYe5mZGr0CPkTp2drf1FCYRJLhSrM088w1GddNXIiGhV9AWANnz3z9a4UgvyZlw+dzX6jOQVQ1zXsfEdbmIotoniuthU7+BKbUvoWZ9HR/d5mfr73PbsVLEkAbDftQ2i8eSSB+Qo1T0i2PlWw99eZ2iIaXf4AuJA/t6/gVSC8DF7Au4sBYBe6OzUYaO7n+gOgUZAiv/ye1rFeAOBcRgg/jdtD/9TzNWwUSjC+8O5Pd4MvANofMzKcDSgM684YMA24swEwt4myOz3wNbdwbxAALpl+mLUKioUVzMSjePDLf3vqQfQ9+AKgvB5FKPMeDW9RHO0gGZtAtqY6edzFAHCmALP2IqeX+eEVsnl3ce+6AdBB7e0asu/q9hGXvz/R6OoFgD3fjyC12z93dQq4ty7gPt9Xi22Pt1Bzw8L7TP6b2ndaRe6x9PMsyrWHLCpe5SbvAVhPL0Jz0udI9QlYBAzF56VwqzCbdey9XsS92KQU/M1HANY7B9YiYOp1BbWmjAIOt5Cai1z59IRoVPQCwFrxDxraCnM73lsgs+/AUtABzftWnl00AX2s1ltjuC6nIIM+K/BNwK8GsvYjO9Wv/24c9Bjw9/7HgNefApj7K0g+HHfOFZ9E8nkJ5i1Cjuh78y8CEpFWGABEGmMAEGmMAUCkMQYAkcYYAEQaYwAQaYwBQKQxBgCRxhgARBpjABBpjAFApDEGAJHGGABEGmMAEGnsMgBOTk7Y2Ng0aS6OAIg0xgAg0hbwDzVqWJGRWf1VAAAAAElFTkSuQmCC" InformativeScreenshot="21dd12db714a9d570a54613d053809ac.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Swag Labs' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                  </Sequence>
+                </uix:NCheckState.IfNotExists>
+                <uix:NCheckState.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.saucedemo.com/inventory.html" DesignTimeRectangle="28, 271, 77, 48" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Products'" FullSelectorArgument="&lt;webctrl parentid='header_container' tag='SPAN' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="&lt;webctrl parentid='header_container' tag='SPAN' type='' class='title' aaname='Products' check:innerText='Products' /&gt;" Guid="2f173d6e-3632-4c65-951e-c79b6350b391" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFEAAAA0CAYAAADyttTfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAS3SURBVHhe7ZfBayJJFIf3f5j/IHPqgxBCIMxJT+KhDwEPHnIICBMILCgsZMOChgEjucgcJhKYhIV1PKxEGBJhSJAhQwIGDCQgZEDcg5iD6EH0IPRB+G1VdbV2t23GSd6GPdQHfbC6fL7+unz16hcono2SSICSSICSSICSSICSSICSSICSSICSSICSSICSSICSSICSSICSSICSSICSSICSSICSSICSSIBDYvM8g+x71/WxgHKtK2e8HJ3jKF69jqLYlgP/YxwSq3sLLHENb3Qdq6vs0legveZjC9Ai+6gN5cQX4MUk9hq4vKqg3pOfn4CHxOnEO+c7CDCRgb1bGHLsv+bFJN6kxSLJ3MjPT2AuiUADn1bZPV8GNTnixugNYIzkB4vhAH023u/9WD3/vpgrp1JJNAYy7sA7h85n/juPSBwZ8hk8nk8yp8QuilF+L42q+HyLDP+bJy/Qr+cQW+b3bIkMGyj+oY9LgbiW15C9nq6t/btDrMvvm9ciInsXqP3tkjhzxchcogV05AjHqBeQ0DVb3AUshXdQfpATrO+5L1uc5pdtrPps93wriH1uybsT5pP4UMA6DxI/Q18MyAT8QYR8rIZG4thlm1C5yW6NWii+5ckvYv3DCWrNLupXOflAQSbBtiK+7yMkkgtj95jVpWYD1dN9ITXg9ztz+RmJLN8N/vD8xZ3eo9lmde84jQgf87OFIGr7gOVVQSmli7ixPyuiNl7etcyS1cwhwsYD8QJqbbYS2/coxnlOQRzV+YQJHhL92Hhn251TcfNt+HQcfZcTx29RQ+LrQI6Z9M+3xQqM/NWQI5LhBRI8TjgH7po/RDnOYwSRHceVWBKeJJHF/Z2/sDA+/SMGxhhXabFhJr5M/hFm2fCIK39v66vtpctNqPbgLA0eEp3XUlDH+m+HuHSsTpm4R400Y6yhOP7bTKim+L0oSuIZZIy1gpRqx8Bl0pz78xIfizvNTIm9M2yJxbOCjWQOpZsGOjO6kzlroht34hZdlH7lMdhfxqMIO+J3T7DBY6Qq5k0XU7nMK5HFjT0S181MiZz2LYp7mwiNazYrXW8Pp1o9YolWDK+VOFldz1mJiW+uXXZUwa4jF6KV6GbYQvUgKkqVxlo9O+QSjasd8UOhg3s5IrHq3LgmMlHvPDYbjrWR2XO5y4i4gQ/OuMY38/cmuVhxp2ti/3RTCIudTuq4JXH3Wg5Iagf8wLGJov1NTL0wE3KJk91ZQyTFjox8x5M7rhB2ZxNmiWWbVuzjiSjaZbGLaggFXbvz6B5ZvxljK39hzs2zFmSZdQh83J7LOC7f9W1z+ViQ1XH7O2MdAj9IaLrZYWTzt6IDMdhL452DpqdRrLXY7txA+X3Y3DTzzjaHXiKHiSwlw1jic+Sl6dso1l0rjjHVz/FeLN9AUzTBzlwMW08qLtbCHNVYT8p7WHcuzRMkwouTuVY9czYTDAP14x1ErLi2OP1r6+VbF+thk2douuq9QyI5Vrc/47RgxzpZzDoV2DFPNz+OKbBOTXNO98I6Tc11YlE8DSWRACWRACWRACWRACWRACWRACWRACWRACWRACWRACWRACWRACWRACWRACWRACWRACWRACXx2QD/Aj5By2lwWyzlAAAAAElFTkSuQmCC" InformativeScreenshot="e90d6cb826c528e0039b10fc2cdf7414.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Swag Labs' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                </uix:NCheckState.Target>
+              </uix:NCheckState>
+            </Sequence>
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Item to cart" sap:VirtualizedContainerService.HintSize="506,566" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_ArrayOfProducts]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:String">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,440" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Add to cart'" sap:VirtualizedContainerService.HintSize="338,193" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="18c7c806-3de4-46fc-996f-95b8ead582b1" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.saucedemo.com/inventory.html" DesignTimeRectangle="740, 496, 160, 34" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Add to cart'" FullSelectorArgument="&lt;webctrl id='add-to-cart-sauce-labs-backpack' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='add-to-cart-*' tag='BUTTON' type='' class='btn btn_primary btn_small btn_inventory ' aaname='Add to cart' check:innerText='Add to cart' /&gt;" Guid="f1000f63-d59d-4787-b0df-568e44949574" ImageBase64="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" InformativeScreenshot="ad275f302acb91e6ad199231e332e738.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Swag Labs' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="600, 332, 299, 20" ElementType="Text" FriendlyName="'Sauce Labs Backpack'" FullSelectorArgument="&lt;webctrl aaname='Sauce Labs Backpack' tag='DIV' /&gt;" FuzzyAccuracy="0.8" FuzzySelectorArgument="[&quot;&lt;webctrl tag='DIV' type='' class='inventory_item_name ' check:innerText='&quot;+ currentItem.Trim +&quot;' /&gt;&quot;]" ImageBase64="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" SearchSteps="FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Disappears" Retry="True">
+                          <uix:VerifyExecutionOptions.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FuzzySelectorArgument="&lt;webctrl id='add-to-cart*' tag='BUTTON' type='' class='btn btn_primary btn_small btn_inventory ' aaname='Add to cart' check:innerText='Add to cart' /&gt;" Guid="f2ab9e66-d8b1-43e1-b06b-7f1ab594bcf9" SearchSteps="FuzzySelector" />
+                          </uix:VerifyExecutionOptions.Target>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Item &quot; + currentItem + &quot; added to cart&quot;]" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="ELSDSb2Cok2nrA43chg9nQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFrSURBVDhPddPNK0RRGMfxGUozOxaShY2kJkVio5mp+QvkJXuWhLUNO1tmVlKsZDcLGRt/AiILeZsrEVJEsfGSl+/vOqee7oynPt1z73me55577r0xH9mgUI91fOIn4gujLrV6kDCMN1cQdYOUS62MTLBYQ8KqKYgqZsr5OpdeGSS04MwUfOAS5wgwg1a0GY2Zi0LcNxiBinyDXbSjCd3u/B53xh4G/fJX4ItlPuxMMO7Hf3uzrwQt7dRcfEFOxelgIc54ycxF7ajBGOwdTpBGCj3YwDF0E5unVzurBpvmorzjAU9Yg/ahATk8wudpH3rVQEu2DbxvTIQbQTCeNHNSypbzSU3oI7ET3i3CjycT5BOMS2ZOpnznIWzjwDhEEX3owgD0Gn2xxp1hAwUnSehf8PTMy3jFszvqkXyDLZafcOWVQUIzjkxB1LRLrR4kDEJvo1rxNTpcavUgYQ7axCtDhfoexvmxav8yY7Ff4RnjWld/dTIAAAAASUVORK5CYII=" InformativeScreenshot="1a7d13ac1853aef41f31e36f7b24855c.jpg" Reference="TME7CrFn6kurqxoQfG9f9Q/ylKsyPaftkCDyBdILzgNoA" Selector="&lt;html app='chrome.exe' title='Swag Labs' /&gt;" Url="https://www.saucedemo.com" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
